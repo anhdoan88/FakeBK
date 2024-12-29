@@ -1,0 +1,39 @@
+﻿@model Teacher
+
+<form method="post">
+    <input asp-for="Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary"> Edit Teacher</h2>
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3 row p-1">
+            <label class="p-0"> Teacher ID</label>
+            <input asp-for="Id" class="form-control" />
+            <span asp-validation-for="Id" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label class="p-0"> Personal ID</label>
+            <input asp-for="OrgpId" class="form-control" />
+            <span asp-validation-for="OrgpId" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label class="p-0"> Department ID</label>
+            <input asp-for="DeptId" class="form-control" />
+            <span asp-validation-for="DeptId" class="text-danger"></span>
+        </div>
+
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control">Update</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Teacher" asp-action="Index" class="btn btn-secondary form-control">
+                    Go back
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+</form>

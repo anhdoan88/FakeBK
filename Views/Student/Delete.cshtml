@@ -1,0 +1,23 @@
+﻿@model FakeBK.Models.Student
+
+@{
+    ViewData["Title"] = "Delete Student";
+}
+
+<h2>Delete Confirmation</h2>
+
+<div>
+    <p>Are you sure you want to delete the following student?</p>
+
+    <ul>
+        <li><strong>ID:</strong> @Model.Id</li>
+        <li><strong>OrgpId:</strong> @Model.OrgpId</li>
+        <li><strong>ClassId:</strong> @Model.ClassId</li>
+    </ul>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
